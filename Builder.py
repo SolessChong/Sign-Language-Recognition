@@ -204,7 +204,7 @@ class GUI:
 			# Make sure we have enough frames to create 10 keyframes for
 			# gestures signs
 			elif len(self.vectorBuffer) >= 10:
-				self.currentSign.samples.append((self.vectorBuffer, fixed=False))
+				self.currentSign.samples.append(utils.vectorize(self.vectorBuffer, fixed=False))
 
 			# Not enough frames were recorded, return before making changes
 			else:
